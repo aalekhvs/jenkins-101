@@ -1,0 +1,9 @@
+# Your verified working base for M-series Mac
+FROM jenkins/agent:latest-alpine3.23-jdk21
+
+USER root
+
+# Alpine uses 'apk' to add python3 and pip
+RUN apk add --no-cache python3 py3-pip
+
+USER jenkins
